@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "outDir": "./dist",
+    "strict": true,
+    "pretty": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "lib": ["es2017"],
+    "noImplicitThis": false,
+    "allowJs": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
