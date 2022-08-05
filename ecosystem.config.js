@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'push-server',
-      script: 'dist/src/index.js',
+      script: 'dist/index.js',
       interpreter: 'node',
       exec_mode: 'fork',
       instantces: 1,
