@@ -1,7 +1,8 @@
 import Koa from "koa";
-import config from "../config";
 import Router from "@koa/router";
-// import Boom from "boom";
+
+const config = require('../config');
+
 
 import sendToWecom from "./send-to-wecom";
 

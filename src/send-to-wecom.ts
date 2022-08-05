@@ -1,6 +1,6 @@
 import request from "axios";
 // const config = require('../config');
-import config from '../config';
+// import config from '../config';
 
 export default async function sendToWecom(body: {
   text: string;
