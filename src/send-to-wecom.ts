@@ -9,7 +9,7 @@ export default async function sendToWecom(body: {
   wecomAgentId: string;
   wecomTouid?: string;
 }): Promise<{ errcode: number; errmsg: string; invaliduser: string }> {
-  body.wecomTouid = body.wecomTouid ? "@all" : '';
+  // body.wecomTouid = body.wecomTouid ? "" : "@all";
   const getTokenUrl = `https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=${body.wecomCId}&corpsecret=${body.wecomSecret}`;
   const getTokenRes = await request.get(getTokenUrl);
   const accessToken = getTokenRes.data.access_token;
@@ -18,7 +18,7 @@ export default async function sendToWecom(body: {
   }
   const sendMsgUrl = `https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${accessToken}`;
   const sendMsgRes = await request.post(sendMsgUrl, {
-    touser: body.wecomTouid,
+    touser: body.wecomTouid || "@all",
     agentid: body.wecomAgentId,
     msgtype: "text",
     text: {
